@@ -24,9 +24,5 @@
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:jandex:1.1.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:${org.springframework-version}" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-core:${org.springframework-version}" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:${org.springframework-version}" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:${org.springframework-version}" level="project" />
   </component>
 </module>
