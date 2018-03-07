@@ -7,12 +7,17 @@ import java.util.Set;
 @Table(name = "word")
 public class Word {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "popularity", nullable = false)
+    private int popularity;
+
+    public Word() {
+    }
 
     public Word(String name) {
         this.name = name;
@@ -35,5 +40,13 @@ public class Word {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(int popularity) {
+        this.popularity = popularity;
     }
 }
