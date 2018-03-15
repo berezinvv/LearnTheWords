@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface WordRepository extends JpaRepository<Word, Integer> {
     Word findByName(String name);
+    Word findWordById(Integer id);
 }

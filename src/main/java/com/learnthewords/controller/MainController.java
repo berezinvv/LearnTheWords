@@ -3,6 +3,7 @@ package com.learnthewords.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.learnthewords.entity.Word;
 import com.learnthewords.repository.WordRepository;
+import com.learnthewords.service.WordService;
 import json.Leo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,7 @@ public class MainController {
 
     @Autowired
     private WordRepository wordRepository;
+    ;
 
     @GetMapping(path = "/getRandomWord")
     public @ResponseBody
@@ -33,7 +35,7 @@ public class MainController {
         List<Word> wordList = wordRepository.findAll();
         int numberOfWords = wordList.size();
 
-        return wordRepository.getOne(random.nextInt(numberOfWords));
+        return wordRepository.findWordById(random.nextInt(numberOfWords));
     }
 
     @GetMapping(path = "/getJsonWord")
@@ -44,7 +46,7 @@ public class MainController {
         List<Word> wordList = wordRepository.findAll();
         int numberOfWords = wordList.size();
 
-        Leo leo = readValuejsonData(wordRepository.getOne(random.nextInt(numberOfWords)));
+        Leo leo = readValuejsonData(wordRepository.findWordById(random.nextInt(numberOfWords)));
 
         return leo;
     }
