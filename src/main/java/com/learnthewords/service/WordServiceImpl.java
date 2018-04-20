@@ -29,4 +29,9 @@ public class WordServiceImpl implements WordService {
     public List<Word> findAll() {
         return wordRepository.findAll();
     }
+
+    @Override
+    public void save(Word word) {
+        wordRepository.save(word);
+    }
 }

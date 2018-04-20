@@ -29,10 +29,7 @@ public class WSConfig extends WsConfigurerAdapter {
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace("http://localhost:8080");
         wsdl11Definition.setSchema(studentsSchema);
-        /*
-        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-    wsdl11Definition.setWsdl(new ClassPathResource("/ws/helloworld.wsdl"));
-         */
+
         return wsdl11Definition;
     }
     @Bean

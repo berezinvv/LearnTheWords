@@ -10,4 +10,6 @@ public interface WordService {
     Word findWordById(Integer id);
 
     List<Word> findAll();
+
+    void save(Word word);
 }
